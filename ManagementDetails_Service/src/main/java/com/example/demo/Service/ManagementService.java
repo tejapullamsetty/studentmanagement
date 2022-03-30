@@ -30,10 +30,11 @@ public class ManagementService {
 	public void delete(int id) {
 		deprepo.deleteById(id);
 	}
-	
-//	public void update(ManagementDetails m) {
-//		deprepo.update(m);
-//	}
+
+	public void save(ManagementDetails m) {
+		deprepo.save(m);
+		
+	}
 	
 	
 }

@@ -47,11 +47,16 @@ public class ManagementController {
 		
 	}
 	
-//	public String updateManagement(@RequestBody ManagementDetails m) {
-//		
-//		service.update(m);
-//		return "data updated";
-//	}
+	@RequestMapping(value = "/update/{id}", method = RequestMethod.PATCH)
+	public String updateManagement(@RequestBody ManagementDetails m) {
+		
+		service.save(m);
+		return "data updated";
+	}
 //	
+//	@RequestMapping(value = "/finddepartmentname/{id}", method = RequestMethod.GET)
+//	public List<ManagementDetails> findmanagementdepartmentbyid(@PathVariable("id") int id){
+//		return service.findmanagementdepartmentbyid(id);
+//	}
 	
 }
